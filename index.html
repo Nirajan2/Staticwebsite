@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of a BIT (Bachelor in Information Technology) Student at Informatics College Pokhara. Explore my projects, skills, education timeline, and achievements in web development and software engineering.">
+    <meta name="keywords"
+        content="BIT Student, Informatics College Pokhara, Portfolio, Web Developer, Pokhara Nepal, HTML, CSS, JavaScript, Python">
+    <meta name="author" content="Nirajan">
+    <title>Nirajan | BIT Student Portfolio</title>
+
+    <!-- Google Fonts: Outfit (Headings) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Boxicons CDN for premium icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="./Css/style.css">
+</head>
+
+<body>
+
+    <!-- Loading Screen (Preloader) -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <p class="preloader-text">Initializing Portfolio...</p>
+        </div>
+    </div>
+
+    <!-- Header / Sticky Navbar -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#home" class="logo" id="nav-logo">
+                Nirajan<span>.BIT</span>
+            </a>
+
+            <!-- Desktop Navigation Menu -->
+            <nav class="navbar" id="navbar">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#achievements" class="nav-link">Achievements</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle Button (Hamburger) -->
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation Menu">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Interactive Background Particles -->
+        <canvas id="hero-canvas"></canvas>
+
+        <!-- Floating CSS Decorative Orbs -->
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+
+        <div class="container hero-container">
+            <div class="hero-content scroll-reveal-fade">
+                <span class="hero-greeting">Welcome to my space</span>
+                <h1 class="hero-title">Hi, I'm <span class="gradient-text">Nirajan</span></h1>
+                <h2 class="hero-subtitle">
+                    BIT Student at <span class="highlight-text">Informatics College Pokhara</span>
+                </h2>
+                <div class="typing-container">
+                    <span class="static-txt">I am passionate about </span>
+                    <span id="dynamic-txt" class="dynamic-txt"></span>
+                </div>
+                <p class="hero-desc">
+                    Designing and engineering beautiful, responsive, and efficient digital solutions. Currently
+                    exploring web applications, database modeling, and artificial intelligence.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary" id="btn-hero-contact">
+                        Contact Me <i class="bx bx-paper-plane"></i>
+                    </a>
+                    <a href="resume.pdf" class="btn btn-secondary" id="btn-hero-cv" download>
+                        Download CV <i class="bx bx-download"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Abstract Floating Visual Representation (Non-image graphics) -->
+            <div class="hero-visual scroll-reveal-fade delay-200">
+                <div class="abstract-badge-container">
+                    <div class="badge-ring"></div>
+                    <div class="badge-ring-inner"></div>
+                    <div class="glass-orb">
+                        <i class="bx bx-code-alt glass-orb-icon"></i>
+                        <span class="orb-pulsate"></span>
+                    </div>
+                    <!-- Small hovering tech bubbles -->
+                    <div class="tech-bubble bubble-html"><i class="bx bxl-html5"></i></div>
+                    <div class="tech-bubble bubble-css"><i class="bx bxl-css3"></i></div>
+                    <div class="tech-bubble bubble-js"><i class="bx bxl-javascript"></i></div>
+                    <div class="tech-bubble bubble-py"><i class="bx bxl-python"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Down Mouse Indicator -->
+        <a href="#about" class="scroll-down-indicator" id="scroll-down-indicator"
+            aria-label="Scroll down to About section">
+            <span class="mouse-icon">
+                <span class="mouse-wheel"></span>
+            </span>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header scroll-reveal-up">
+                <span class="section-subtitle">Get to Know Me</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="about-grid">
+                <!-- Info cards column -->
+                <div class="about-info scroll-reveal-up">
+                    <div class="glass-card about-intro-card">
+                        <h3>Creative BIT Student &amp; Developer</h3>
+                        <p>
+                            I am currently pursuing a <strong>Bachelor in Information Technology (BIT)</strong> at
+                            <strong>Informatics College Pokhara</strong>. I have a deep curiosity for computing
+                            architectures and modern web technologies, translating complex problems into functional
+                            code.
+                        </p>
+                        <p>
+                            My academic journey helps me build a strong foundation in software engineering principles,
+                            algorithms, and systems analysis. I thrive in collaborative environments and love turning
+                            concepts into elegant websites and applications.
+                        </p>
+                    </div>
+
+                    <div class="about-sub-grid">
+                        <div class="glass-card about-detail-card">
+                            <i class="bx bx-book-bookmark card-icon"></i>
+                            <h4>Interests</h4>
+                            <p>Full-Stack Web Dev, UI/UX Crafting, Algorithms, Machine Learning</p>
+                        </div>
+                        <div class="glass-card about-detail-card">
+                            <i class="bx bx-target-lock card-icon"></i>
+                            <h4>Career Goal</h4>
+                            <p>To become a Lead Solutions Architect designing global-scale web systems</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick details list -->
+                <div class="about-stats scroll-reveal-up delay-200">
+                    <div class="glass-card profile-details-card">
+                        <div class="details-header">
+                            <i class="bx bx-user-circle"></i>
+                            <h3>Profile Summary</h3>
+                        </div>
+                        <ul class="details-list">
+                            <li>
+                                <span class="detail-label">Name:</span>
+                                <span class="detail-val">Nirajan</span>
+                            </li>
+                            <li>
+                                <span class="detail-label">Degree:</span>
+                                <span class="detail-val">BIT (Information Technology)</span>
+                            </li>
+                            <li>
+                                <span class="detail-label">Institution:</span>
+                                <span class="detail-val">Informatics College Pokhara</span>
+                            </li>
+                            <li>
+                                <span class="detail-label">Location:</span>
+                                <span class="detail-val">Pokhara, Nepal</span>
+                            </li>
+                            <li>
+                                <span class="detail-label">Freelance:</span>
+                                <span class="detail-val text-success">Available</span>
+                            </li>
+                        </ul>
+                        <div class="stats-counter-grid">
+                            <div class="stat-counter">
+                                <span class="counter-num">12+</span>
+                                <span class="counter-label">Projects Completed</span>
+                            </div>
+                            <div class="stat-counter">
+                                <span class="counter-num">3.8</span>
+                                <span class="counter-label">GPA Equivalent</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section bg-alt">
+        <div class="container">
+            <div class="section-header scroll-reveal-up">
+                <span class="section-subtitle">What I Excel In</span>
+                <h2 class="section-title">My Skills</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Skill cards (Interactive list) -->
+                <div class="skill-card glass-card scroll-reveal-up" data-skill="HTML">
+                    <div class="skill-icon-wrap html-theme">
+                        <i class="bx bxl-html5"></i>
+                    </div>
+                    <div class="skill-info">
+                        <div class="skill-name-percent">
+                            <h3>HTML5</h3>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-bar" data-percent="95%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass-card scroll-reveal-up delay-100" data-skill="CSS">
+                    <div class="skill-icon-wrap css-theme">
+                        <i class="bx bxl-css3"></i>
+                    </div>
+                    <div class="skill-info">
+                        <div class="skill-name-percent">
+                            <h3>CSS3 / Grid &amp; Flexbox</h3>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-bar" data-percent="90%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass-card scroll-reveal-up delay-200" data-skill="JS">
+                    <div class="skill-icon-wrap js-theme">
+                        <i class="bx bxl-javascript"></i>
+                    </div>
+                    <div class="skill-info">
+                        <div class="skill-name-percent">
+                            <h3>JavaScript (ES6+)</h3>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-bar" data-percent="85%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass-card scroll-reveal-up" data-skill="Python">
+                    <div class="skill-icon-wrap python-theme">
+                        <i class="bx bxl-python"></i>
+                    </div>
+                    <div class="skill-info">
+                        <div class="skill-name-percent">
+                            <h3>Python (OOP &amp; Scripting)</h3>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-bar" data-percent="80%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass-card scroll-reveal-up delay-100" data-skill="GitHub">
+                    <div class="skill-icon-wrap github-theme">
+                        <i class="bx bxl-github"></i>
+                    </div>
+                    <div class="skill-info">
+                        <div class="skill-name-percent">
+                            <h3>GitHub &amp; Version Control</h3>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-bar" data-percent="88%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass-card scroll-reveal-up delay-200" data-skill="UI/UX">
+                    <div class="skill-icon-wrap uiux-theme">
+                        <i class="bx bx-paint-roll"></i>
+                    </div>
+                    <div class="skill-info">
+                        <div class="skill-name-percent">
+                            <h3>UI/UX Design &amp; Prototyping</h3>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-bar" data-percent="75%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass-card scroll-reveal-up" data-skill="Problem Solving">
+                    <div class="skill-icon-wrap logic-theme">
+                        <i class="bx bx-brain"></i>
+                    </div>
+                    <div class="skill-info">
+                        <div class="skill-name-percent">
+                            <h3>Problem Solving &amp; Data Structures</h3>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-bar" data-percent="85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education section">
+        <div class="container">
+            <div class="section-header scroll-reveal-up">
+                <span class="section-subtitle">Academic Timeline</span>
+                <h2 class="section-title">Education</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="timeline-container">
+                <!-- Timeline Line -->
+                <div class="timeline-line"></div>
+
+                <!-- Timeline item 1: Informatics College Pokhara -->
+                <div class="timeline-item scroll-reveal-up">
+                    <div class="timeline-marker">
+                        <i class="bx bxs-graduation"></i>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">2024 - Present</span>
+                        <h3>Bachelor in Information Technology (BIT)</h3>
+                        <h4 class="college-name">Informatics College Pokhara</h4>
+                        <p class="timeline-desc">
+                            Focused on software development, web applications, computational methods, database design,
+                            and systems architectures. Actively engaged in tech events, coding bootcamps, and hackathons
+                            within the college ecosystem.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline item 2: Previous Education (High School) -->
+                <div class="timeline-item scroll-reveal-up delay-100">
+                    <div class="timeline-marker">
+                        <i class="bx bxs-school"></i>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">2021 - 2023</span>
+                        <h3>Higher Secondary Education (+2 Science)</h3>
+                        <h4 class="college-name">Secondary School, Pokhara</h4>
+                        <p class="timeline-desc">
+                            Specialized in Computer Science, Mathematics, and Physics. Formed foundation in programmatic
+                            logic, structured programming concepts in C, and database management essentials.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline item 3: Secondary School -->
+                <div class="timeline-item scroll-reveal-up delay-200">
+                    <div class="timeline-marker">
+                        <i class="bx bx-book-open"></i>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">2020</span>
+                        <h3>Secondary Education Examination (SEE)</h3>
+                        <h4 class="college-name">Pokhara Academy</h4>
+                        <p class="timeline-desc">
+                            Completed schooling with high distinction, fostering early interests in science,
+                            engineering, and digital technologies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section bg-alt">
+        <div class="container">
+            <div class="section-header scroll-reveal-up">
+                <span class="section-subtitle">My Creative Works</span>
+                <h2 class="section-title">Projects</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: Portfolio Website -->
+                <div class="project-card glass-card scroll-reveal-up">
+                    <div class="project-img-placeholder">
+                        <i class="bx bx-layout proj-vector-icon"></i>
+                        <span class="proj-category">Frontend / Web</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>
+                            A beautiful, modern glassmorphic web space highlighting academic milestones, coding
+                            projects, and skill structures. Employs advanced custom styling and physics-based particle
+                            canvas logic.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">Vanilla JS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-icon btn-outline" aria-label="GitHub Repository"><i
+                                    class="bx bxl-github"></i> Code</a>
+                            <a href="#home" class="btn btn-icon btn-primary" aria-label="Live Demo"><i
+                                    class="bx bx-link-external"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Student Management System -->
+                <div class="project-card glass-card scroll-reveal-up delay-100">
+                    <div class="project-img-placeholder">
+                        <i class="bx bx-group proj-vector-icon"></i>
+                        <span class="proj-category">Software / Python</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Student Management System</h3>
+                        <p>
+                            A software application built to manage records, search, filter, and track course statuses.
+                            Features a sleek Tkinter dark interface paired with an SQL database back-end for complete
+                            operations.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">Tkinter</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-icon btn-outline" aria-label="GitHub Repository"><i
+                                    class="bx bxl-github"></i> Code</a>
+                            <a href="#" class="btn btn-icon btn-primary btn-disabled" aria-label="Live Demo"><i
+                                    class="bx bx-link-external"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Futsal Booking System -->
+                <div class="project-card glass-card scroll-reveal-up delay-200">
+                    <div class="project-img-placeholder">
+                        <i class="bx bx-football proj-vector-icon"></i>
+                        <span class="proj-category">Web Application</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Futsal Booking System</h3>
+                        <p>
+                            An interactive web portal allowing sports enthusiasts in Pokhara to book grounds, view live
+                            schedules, manage reservations, and coordinate team challenges.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-icon btn-outline" aria-label="GitHub Repository"><i
+                                    class="bx bxl-github"></i> Code</a>
+                            <a href="#" class="btn btn-icon btn-primary" aria-label="Live Demo"><i
+                                    class="bx bx-link-external"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: E-Commerce Website -->
+                <div class="project-card glass-card scroll-reveal-up">
+                    <div class="project-img-placeholder">
+                        <i class="bx bx-shopping-bag proj-vector-icon"></i>
+                        <span class="proj-category">Frontend UI</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Website</h3>
+                        <p>
+                            A conversion-oriented e-commerce interface featuring grid sorting, animated slide-out side
+                            cart, dynamic total calculations, and sleek glass details.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">CSS Grid</span>
+                            <span class="tag">Flexbox</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-icon btn-outline" aria-label="GitHub Repository"><i
+                                    class="bx bxl-github"></i> Code</a>
+                            <a href="#" class="btn btn-icon btn-primary" aria-label="Live Demo"><i
+                                    class="bx bx-link-external"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements section">
+        <div class="container">
+            <div class="section-header scroll-reveal-up">
+                <span class="section-subtitle">Milestones &amp; Recognition</span>
+                <h2 class="section-title">Achievements</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="achievements-grid">
+                <!-- Achievement 1 -->
+                <div class="achievement-card glass-card scroll-reveal-up">
+                    <div class="achievement-icon">
+                        <i class="bx bx-trophy"></i>
+                    </div>
+                    <h3>Semester Topper</h3>
+                    <p class="achievement-issuer">Informatics College Pokhara</p>
+                    <p class="achievement-desc">
+                        Honored with the Academic Excellence Award for attaining the highest grade score in the BIT
+                        semester evaluation.
+                    </p>
+                </div>
+
+                <!-- Achievement 2 -->
+                <div class="achievement-card glass-card scroll-reveal-up delay-100">
+                    <div class="achievement-icon">
+                        <i class="bx bx-medal"></i>
+                    </div>
+                    <h3>Web Dev Hackathon Runner-up</h3>
+                    <p class="achievement-issuer">Pokhara Tech Community</p>
+                    <p class="achievement-desc">
+                        Collaborated with a team of three to build an interactive community blood finder web application
+                        in under 24 hours.
+                    </p>
+                </div>
+
+                <!-- Achievement 3 -->
+                <div class="achievement-card glass-card scroll-reveal-up delay-200">
+                    <div class="achievement-icon">
+                        <i class="bx bx-certification"></i>
+                    </div>
+                    <h3>Python Automation Specialist</h3>
+                    <p class="achievement-issuer">Cisco Academy Certification</p>
+                    <p class="achievement-desc">
+                        Earned professional certification demonstrating fluency in advanced script structuring,
+                        automation tasks, and data processing.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section bg-alt">
+        <div class="container">
+            <div class="section-header scroll-reveal-up">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Info details column -->
+                <div class="contact-info scroll-reveal-up">
+                    <div class="glass-card contact-info-card">
+                        <h3>Contact Information</h3>
+                        <p>Feel free to reach out to discuss project ideas, freelance opportunities, or academic
+                            collaborations.</p>
+
+                        <div class="info-items">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="bx bx-envelope"></i>
+                                </div>
+                                <div class="info-text">
+                                    <span>Email me</span>
+                                    <a href="mailto:nirajan@informatics.edu.np">nirajan@informatics.edu.np</a>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="bx bx-phone"></i>
+                                </div>
+                                <div class="info-text">
+                                    <span>Call me</span>
+                                    <a href="tel:+9779876543210">+977 9876543210</a>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="bx bx-map"></i>
+                                </div>
+                                <div class="info-text">
+                                    <span>Location</span>
+                                    <p>Pokhara, Nepal</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-channels">
+                            <h4>Connect with me on</h4>
+                            <div class="social-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                                    aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                                    aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Twitter"><i class="bx bxl-twitter"></i></a>
+                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact form column -->
+                <div class="contact-form-container scroll-reveal-up delay-200">
+                    <div class="glass-card contact-card-form">
+                        <h3>Send a Message</h3>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group-split">
+                                <div class="form-group">
+                                    <label for="form-name">Your Name</label>
+                                    <input type="text" id="form-name" required placeholder="John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-email">Your Email</label>
+                                    <input type="email" id="form-email" required placeholder="john@example.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-subject">Subject</label>
+                                <input type="text" id="form-subject" required placeholder="Project Collaboration">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <textarea id="form-message" rows="5" required
+                                    placeholder="Hi Nirajan, I would love to collaborate on a..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit" id="btn-submit">
+                                Send Message <i class="bx bx-send"></i>
+                            </button>
+                        </form>
+
+                        <!-- Form Success Glass Overlay (Hidden by default) -->
+                        <div id="form-success-overlay" class="form-success-overlay">
+                            <div class="success-message-box">
+                                <i class="bx bx-check-circle success-icon"></i>
+                                <h3>Thank You!</h3>
+                                <p>Your message has been sent successfully. I will get back to you shortly.</p>
+                                <button class="btn btn-primary" id="btn-success-close">Done</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                Nirajan<span>.BIT</span>
+            </div>
+            <p class="footer-moto">Engineering digital solutions with passion and code.</p>
+            <div class="footer-nav">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nirajan. All Rights Reserved.</p>
+                <p>Designed with <i class="bx bxs-heart text-danger"></i> &amp; Vanilla Web Technologies</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="scroll-top" class="scroll-top" aria-label="Back to Top">
+        <i class="bx bx-chevrons-up"></i>
+    </button>
+
+    <!-- Project Logic Script -->
+    <script src="./Js/script.js"></script>
+</body>
+
+</html>
