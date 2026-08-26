@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
        5. HERO SECTION CUSTOM TYPING ANIMATION
        ========================================================================== */
     const dynamicTxt = document.getElementById('dynamic-txt');
-    const roles = ["Full-Stack Web Dev", "Python Programmer", "UI/UX Designer", "Problem Solver"];
+    const roles = ["Frontend Developer", "React Developer", "Java & OOP Programmer", "Python Developer"];
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -302,18 +302,34 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.innerHTML = `Sending... <i class="bx bx-loader-alt bx-spin"></i>`;
             submitBtn.style.pointerEvents = 'none';
 
-            // Simulate server network latency response
-            setTimeout(() => {
-                // Show glassmorphic success overlay message box
-                successOverlay.classList.add('active');
-                
-                // Restore button states
-                submitBtn.innerHTML = originalBtnContent;
-                submitBtn.style.pointerEvents = 'auto';
-                
-                // Clear the input fields
-                contactForm.reset();
-            }, 1500);
+            const formData = new FormData(contactForm);
+            const payload = Object.fromEntries(formData.entries());
+            payload.replyto = payload.email; // So hitting "Reply" in Gmail goes to the visitor, not Web3Forms
+            payload.from_name = 'Portfolio Contact Form'; // Friendlier sender name than a generic default
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(payload)
+            })
+                .then(response => response.json())
+                .then(result => {
+                    submitBtn.innerHTML = originalBtnContent;
+                    submitBtn.style.pointerEvents = 'auto';
+
+                    if (result.success) {
+                        // Show glassmorphic success overlay message box
+                        successOverlay.classList.add('active');
+                        contactForm.reset();
+                    } else {
+                        alert('Something went wrong sending your message. Please try again or email me directly.');
+                    }
+                })
+                .catch(() => {
+                    submitBtn.innerHTML = originalBtnContent;
+                    submitBtn.style.pointerEvents = 'auto';
+                    alert('Network error — please check your connection and try again.');
+                });
         });
 
         // Close Success Dialog

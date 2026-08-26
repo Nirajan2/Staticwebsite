@@ -893,6 +893,10 @@ button, input, textarea {
 .github-theme i { color: #f05032; }
 .uiux-theme i { color: var(--accent); }
 .logic-theme i { color: var(--success); }
+.java-theme i { color: #f89820; }
+.react-theme i { color: #61dafb; }
+.mysql-theme i { color: #4479a1; }
+.powerbi-theme i { color: #f2c811; }
 
 .skill-info {
     width: 100%;
