@@ -897,6 +897,7 @@ button, input, textarea {
 .react-theme i { color: #61dafb; }
 .mysql-theme i { color: #4479a1; }
 .powerbi-theme i { color: #f2c811; }
+.network-theme i { color: #00a3e0; }
 
 .skill-info {
     width: 100%;
